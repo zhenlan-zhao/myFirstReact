@@ -1,8 +1,13 @@
 import React from 'react';
-import LoginControl from "./otherPart"
+import LoginControl from "./loginControl"
+import NumberList from './listGeneration';
 import logo from './logo.svg';
 import './App.css';
-
+const numbers = [1, 2, 3, 4, 5];
+const posts = [
+  {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+  {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+];
 function App() {
   return (
     <div className="App">
@@ -24,6 +29,7 @@ function App() {
         <Toggle/>
       </header>
       <LoginControl/>
+      <NumberList numbers={numbers} posts={posts}/>
     </div>
   );
 }
