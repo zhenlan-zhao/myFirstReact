@@ -1,6 +1,7 @@
 import React from 'react';
-import LoginControl from "./loginControl"
+import LoginControl from "./loginControl";
 import NumberList from './listGeneration';
+import ControlledFrom from "./controlledForm";
 import logo from './logo.svg';
 import './App.css';
 const numbers = [1, 2, 3, 4, 5];
@@ -30,6 +31,7 @@ function App() {
       </header>
       <LoginControl/>
       <NumberList numbers={numbers} posts={posts}/>
+      <ControlledFrom />
     </div>
   );
 }
