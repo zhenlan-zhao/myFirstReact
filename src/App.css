@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+button {
+  font-size:1em;
+  color: brown;
+  height: 50px;
+  width: 200px;
+  margin: 15px;
+}
+.warning {
+  background-color: red;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+
+  font-size: 14pt;
+  color: white;
+}

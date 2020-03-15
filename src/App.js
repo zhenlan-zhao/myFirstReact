@@ -1,4 +1,5 @@
 import React from 'react';
+import LoginControl from "./otherPart"
 import logo from './logo.svg';
 import './App.css';
 
@@ -19,9 +20,43 @@ function App() {
           Learn React
         </a>
         <Clock/>
+        <ActionLink/>
+        <Toggle/>
       </header>
+      <LoginControl/>
     </div>
   );
+}
+function ActionLink(){
+  function handleClick(e){
+    e.preventDefault();
+    console.log("The link was clicked")
+  }
+  return (
+    <a href="#" onClick={handleClick}>
+      Click me
+    </a>
+  );
+}
+class Toggle extends React.Component{
+  constructor(props){
+    super(props);
+    this.state={isToggleOn:true};
+    this.handleClick=this.handleClick.bind(this);
+  }
+  handleClick(){
+    this.setState(state=>({
+      isToggleOn:!state.isToggleOn
+    }))
+  }
+  render(){
+    return <button onClick={this.handleClick}>
+      {this.state.isToggleOn?"ON":"OFF"}
+    </button>
+  }
+}
+function FormattedDate(props) {
+  return <h2>It is {props.date.toLocaleTimeString()}.</h2>;
 }
 class Clock extends React.Component{
   constructor(props){
@@ -46,7 +81,7 @@ class Clock extends React.Component{
     return(
       <div>
         <h1>Hello,zhaozhenlan</h1>
-        <h2>It is {this.state.date.toLocaleTimeString()}</h2>
+        <FormattedDate date={this.state.date} />
       </div>
     )
   }
