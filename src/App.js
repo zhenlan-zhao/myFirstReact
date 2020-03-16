@@ -4,12 +4,21 @@ import NumberList from './element/listGeneration';
 import ControlledFrom from "./element/controlledForm";
 import Calculator from "./element/cauculator"
 import SignUpDialog from "./element/welcomeDialog"
+import FilterableProductTable from "./element/tablePart"
 import logo from './logo.svg';
 import './App.css';
 const numbers = [1, 2, 3, 4, 5];
 const posts = [
   {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
   {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+];
+const PRODUCTS = [
+  {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
+  {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
+  {category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball'},
+  {category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch'},
+  {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
+  {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
 ];
 function App() {
   return (
@@ -41,6 +50,10 @@ function App() {
       <div>
         Welcome All of You!
         <SignUpDialog/>
+      </div>
+      <div className="tablePart">
+        Below is a FilterableProductTable!
+        <FilterableProductTable products={PRODUCTS}/>
       </div>
     </div>
   );

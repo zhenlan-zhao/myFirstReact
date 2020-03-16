@@ -97,3 +97,7 @@ button {
   height: 100%; 
   background: pink;
 }
+.tablePart,table{
+  width: 60%;
+  margin: 30px auto;
+}
