@@ -1,7 +1,9 @@
 import React from 'react';
-import LoginControl from "./loginControl";
-import NumberList from './listGeneration';
-import ControlledFrom from "./controlledForm";
+import LoginControl from "./element/loginControl";
+import NumberList from './element/listGeneration';
+import ControlledFrom from "./element/controlledForm";
+import Calculator from "./element/cauculator"
+import SignUpDialog from "./element/welcomeDialog"
 import logo from './logo.svg';
 import './App.css';
 const numbers = [1, 2, 3, 4, 5];
@@ -32,6 +34,14 @@ function App() {
       <LoginControl/>
       <NumberList numbers={numbers} posts={posts}/>
       <ControlledFrom />
+      <div>
+        Below is a temperature target:
+        <Calculator/>
+      </div>
+      <div>
+        Welcome All of You!
+        <SignUpDialog/>
+      </div>
     </div>
   );
 }
@@ -41,7 +51,7 @@ function ActionLink(){
     console.log("The link was clicked")
   }
   return (
-    <a href="#" onClick={handleClick}>
+    <a href="www.baidu.com" onClick={handleClick}>
       Click me
     </a>
   );
