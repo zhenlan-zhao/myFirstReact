@@ -23,7 +23,7 @@ function Dialog(props){
 }
 
 function Contracts(){
-  return <div className="Contracts"></div>
+  return <div className="Contacts"/>
 }
 function Chat(){
   return <div className="Chat"/>
@@ -43,7 +43,7 @@ function SplitPane(props){
 function ShowPane(){
   return (
     <SplitPane
-      lef={<Contracts/>}
+      left={<Contracts/>}
       right={<Chat/>}/>
   );
 }
@@ -59,13 +59,15 @@ class SignUpDialog extends React.Component{
   render(){
     return(
       <div>
+        <div>
+        <ShowPane/>
+        </div>
         <Dialog title="Mars Exploration Program" message="How should we refer to you?">
           <input value={this.state.value} onChange={this.handleChange}/>
           <button onClick={this.handleSignUp}>
             Sign Me Up!
           </button>      
         </Dialog>
-        <ShowPane/>
       </div>
     );
   }
