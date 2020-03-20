@@ -5,6 +5,8 @@ import ControlledFrom from "./element/controlledForm";
 import Calculator from "./element/cauculator"
 import SignUpDialog from "./element/welcomeDialog"
 import FilterableProductTable from "./element/tablePart"
+import ModalApp from "./element/modal"
+import {ThemedApp,SubThemedApp} from "./element/themeApp"
 import logo from './logo.svg';
 import './App.css';
 const numbers = [1, 2, 3, 4, 5];
@@ -54,6 +56,13 @@ function App() {
       <div className="tablePart">
         Below is a FilterableProductTable!
         <FilterableProductTable products={PRODUCTS}/>
+      </div>
+      <div className="modalPart">
+        <ModalApp/>
+      </div>
+      <div id="themeAPP">
+        <ThemedApp/>
+        <SubThemedApp/>
       </div>
     </div>
   );
